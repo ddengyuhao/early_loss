@@ -1,0 +1,47 @@
+\documentclass[sigconf, anonymous]{acmart}
+
+\input{sections/commands}
+
+%\settopmatter{printacmref = false}
+
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+	\providecommand\BibTeX{{%
+			Bib\TeX}}}
+		
+%% These commands are for a PROCEEDINGS abstract or paper.
+\acmConference[SIGMOD' 24]{Make sure to enter the correct
+	conference title from your rights confirmation emai}{June 11--16,
+	2024}{Santiago, Chile}
+
+\begin{document}
+\title{Synthetic Data Generation for Machine Learning Models }
+
+\title{Mitigating Data Scarcity in Machine Learning through Reinforcement Learning-based Data Generation}
+
+\renewcommand{\shortauthors}{Trovato et al.}
+
+\begin{abstract}
+Abstract here.
+\end{abstract}
+
+\maketitle
+
+\input{sections/01-intro}
+\input{sections/02-pre}
+\input{sections/03-framework}
+\input{sections/04-datagen}
+\input{sections/05-dataeva}
+\input{sections/06-exp}
+\input{sections/07-related}
+\input{sections/08-conclusion}
+
+
+\normalem
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{bib/ref}
+
+\end{document}
+\endinput
