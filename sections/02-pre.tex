@@ -2,27 +2,25 @@
 \section{Preliminary} 
 \label{sec:pre}
 
-\subsection{Problem Statement}
+\subsection{Problem Definition}
 
-\stitle{Machine learning task.}
+\stitle{Detection with parameter(gradient?) approximation}
 
 The setting of our problems.
 
-Input:
-\begin{itemize}
-	\item A small training set with lots of unlabeled data
-	\item A validation (test) set
-	\item A user-specified downstream model
-\end{itemize}
+Input: A trainging set which contains mislabeled data.
+% \begin{itemize}
+%	\item A trainging set which contains mislabeled data.
+% \end{itemize}
 
-Output: A trained downstream model with best performance on the test set.
+Output: A subset of the initial training set whose parameters are cloest to those of the model trained by removing all the real dirty data in the training set.
 
+\stitle{Complexity analysis:} NP
 
-\subsection{Deep Generative Models for Tables}
+\subsection{Early Loss}
 
+The accuracy on “clean” samples is higher than on the “bad" samples, especially in the initial epochs of training. In other words, the training loss on correctly labeled instances is higher than that of the incorrectly labeled instance.
 
-\subsection{Reinforcement Learning: A Primer}
+\subsection{Parameters Influence}
 
-
-
-\nan{We should give some background about generative models and RL -- not sure how many reviewers know these in details.}
+Parameters of the model which is trained by a dataset only contains "clean" samples are more likely to have a larger change when adding one "bad" sample into the dataset, compared with adding a "clean" sample.
