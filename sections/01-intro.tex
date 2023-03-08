@@ -18,6 +18,8 @@ Based on the challenge, we have the following observation and proposed methods.
 
 \stitle{Observation.} Since it is inappropriate to detect mislabels after training because the model has already fitted the dirty data. We consider whether we can leverage the metadata during (or at the beginning of) training to help detect mislabels. The high level intuition is that this strategy clearly avoids data locality because all instances participate in training, while it can also capture the entire data distribution to a certain degree before the model fits dirty instances. 
 
+Therefore, as shown in Figure~\ref{XXX}, we can observe that the \textit{early loss} can well distinguish 
+
 \stitle{Our proposal.}
 Our main idea is to find out the instance in the training set which is labeled incorrectly.
 More specifically, \nan{Add more details later.}
