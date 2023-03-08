@@ -18,15 +18,32 @@ Based on the challenge, we have the following observation and proposed methods.
 
 \stitle{Observation.} Since it is inappropriate to detect mislabels after training because the model has already fitted the dirty data. We consider whether we can leverage the metadata during (or at the beginning of) training to help detect mislabels. The high level intuition is that this strategy clearly avoids data locality because all instances participate in training, while it can also capture the entire data distribution to a certain degree before the model fits dirty instances. 
 
-Therefore, as shown in Figure~\ref{XXX}, we can observe that the \textit{early loss} can well distinguish 
 
-\stitle{Our proposal.}
-Our main idea is to find out the instance in the training set which is labeled incorrectly.
-More specifically,% \nan{Add more details later.}
+\begin{figure}
+	\centering
+	\hspace{-2em}
+	\includegraphics[width=0.35\textwidth]{figures/loss}
+	\caption{An Example of Early Loss.}
+	\label{fig:loss}
+\end{figure}
+
+Therefore,  we observed that the \textit{early loss} can well distinguish mislabeled instances from clean ones. Early loss means the loss of each instance at early training epochs. As shown in Figure~\ref{fig:loss}, the X-axis denotes the range of normalized loss after training the first epoch,  and the Y-axis denotes the number of instances falling into the corresponding range. We can see that  the mislabeled instances always have large loss, while the clean ones are associated with relatively small loss. 
+
+\stitle{Our proposal.} Based on the above observation, generally speaking, we can conclude that mislabeled instances are harder for an ML model to fit than the clean instances especially at early epochs, leading to large loss. Therefore, we propose our \sys framework that leverages the early loss to detect mislabeled instances in an ML training set. The key idea is straightforward yet effective that at each early epoch,  we sort the instances in the training set according to the loss in descending order. Then we tend to iteratively identify top instances as mislabeled ones and remove them from the training set. We remove because we hope to  navigate the model  towards a well-performed one, as if it is trained over clean instances. In this way, at the subsequent epochs, the model can better fit clean instances and recognize mislabeled ones. 
+
+However, to make the model better, purely removing instances with the largest value is sub-optimal because an instance with a large loss does not imply it has a large impact on the model. Hence, \sys has another module  to estimate the influence of each instance. A higher influence indicates that if we identify the corresponding instance as mislabeled and remove it, the model will be more affected and quickly lead to a well-performed model trained over clean instances. Besides, we also design a strategy to estimate the rate of mislabeled instances, so as to help judge when the \sys stops. What's more, there are likely to  exist some outliers in each dataset, which are also hard to be  fitted by a model at early epochs with large loss. If they are identified as mislabeled, our precision goes down. Hence, we also propose a module to cope with these outliers.
+
 
 \stitle{Contributions.}
 Our contributions are summarized as follows:
 
+\noindent (1) We formally model the mislabel detection problem and  design an iterative mislabel detection framework \sys with high accuracy based on machine learning training.
+
+\noindent (2) We introduce the early loss to help determine whether an instance is mislabeled, which is very effective.
+
+\noindent (3) We propose an influence computation method customized to our problem to further improve the performance of  mislabel detection, based on the influence function. 
+
+\noindent (4) Sufficient experiments on XX datasets over XX baselines demonstrate that \sys outperforms them up to XX in terms of the F1-score.
 
 \begin{figure*}
 	\centering
@@ -36,11 +53,6 @@ Our contributions are summarized as follows:
 \end{figure*}
 
 
-\be
-	\item 
-	\item 
-	%\item \nan{If we can have a good summary of experiments, we can either add here or use a ``stitle'' section to highlight the empirical findings.}
-\ee
 
 
 
