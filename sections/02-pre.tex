@@ -17,10 +17,6 @@ Output: A subset of the initial training set whose parameters are closest to tho
 
 \stitle{Complexity analysis:} NP
 
-\subsection{Early Loss}
+%\subsection{Early Loss} The accuracy on ``clean'' samples is higher than on the ``bad'' samples, especially in the initial epochs of training. In other words, the training loss on correctly labeled instances is higher than that of the incorrectly labeled instance.
 
-The accuracy on ``clean'' samples is higher than on the ``bad'' samples, especially in the initial epochs of training. In other words, the training loss on correctly labeled instances is higher than that of the incorrectly labeled instance.
-
-\subsection{Parameters Influence}
-
-Parameters of the model which is trained by a dataset only contains ``clean'' samples are more likely to have a larger change when adding one ``bad'' sample into the dataset, compared with adding a ``clean'' sample.
+%\subsection{Parameters Influence} Parameters of the model which is trained by a dataset only contains ``clean'' samples are more likely to have a larger change when adding one ``bad'' sample into the dataset, compared with adding a ``clean'' sample.

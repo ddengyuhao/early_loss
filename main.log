@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  8 MAR 2023 10:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  8 MAR 2023 11:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1947,7 +1947,7 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 22.
 
-<figures/framework.pdf, id=88, 1014.79124pt x 308.15125pt>
+<figures/framework.pdf, id=80, 1014.79124pt x 308.15125pt>
 File: figures/framework.pdf Graphic file (type pdf)
 
 <use figures/framework.pdf>
@@ -1983,13 +1983,13 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
  [1.1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-Underfull \vbox (badness 1117) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 37.
+(Font)              scaled to size 7.0pt on input line 42.
  [2.2 <./figures/framework.pdf>]) (./sections/07-related.tex)
 (./sections/08-conclusion.tex) (./main.bbl
 
@@ -2021,7 +2021,7 @@ Package atveryend Info: Executing hook `AfterLastShipout' on input line 44.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AB7B4C65A316585E8A2FCDB875759697;2892.
+(rerunfilecheck)             Checksum: 440773DD959D5CE8D32CFD56FAE381D2;2574.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2033,13 +2033,13 @@ LaTeX Font Warning: Size substitutions with differences
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 42737 strings out of 492995
- 783503 string characters out of 6132704
- 944383 words of memory out of 5000000
- 45063 multiletter control sequences out of 15000+600000
+ 42733 strings out of 492995
+ 783443 string characters out of 6132704
+ 945383 words of memory out of 5000000
+ 45061 multiletter control sequences out of 15000+600000
  159729 words of font info for 236 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,12n,94p,10381b,13653s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,11n,94p,10381b,13654s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/l
 btn_25tcsq.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lb
 tn_oexx6f.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbt
@@ -2056,10 +2056,10 @@ lic/libertine/LinBiolinumTB.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
 ype1/public/libertine/LinLibertineTB.pfb></usr/local/texlive/2017/texmf-dist/fo
 nts/type1/public/libertine/LinLibertineTBI.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/public/libertine/LinLibertineTI.pfb>
-Output written on main.pdf (3 pages, 495656 bytes).
+Output written on main.pdf (3 pages, 485877 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 163 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 41146 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 226 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 41130 words of extra memory for PDF output out of 42996 (max. 10000000)
 
