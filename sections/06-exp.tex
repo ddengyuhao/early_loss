@@ -30,7 +30,7 @@
 
 6. \textbf{Ensemble-based method with majority vote:}  The main idea of this method is tha same as the Ensemble-based method with consensus filter.The only inconsistency between them is that majority vote strategy considers an example to be mislabeled if it disagrees with the majority vote of the classifiers.
 
-7. \textbf{Cleanlab:} Cleanlab 
+7. \textbf{Cleanlab:} Cleanlab proposes an emerging framework called confident learning, which core for detection include two main steps: Count and Clean. The first step is to estimate a joint distribution directly between incorrectly labeled data and uncorrupted(real) data based on the assumption of classification noise process(CNP). After that, some instances in the training set would be tabbed as mislabel based on the joint distribution matrix computed above in the second step.
 
 8. \textbf{Noisy Cross-Validation(NCV):} This method first randomly devide a noisy training set into two halves, then train a neural network for these two half separately. After that, the network which is trained on one half will be applied to another half of the dataset. A sample would be identified as mislabel when its current label is different from its predicted label.
 
@@ -42,17 +42,19 @@
 
 We also consider three variants of our algorithm. The goal is to compare the effectiveness of the cross-validation using both early loss and parameter influence. For all variations, we use the same training paradigms. We consider the following variants:
 
-1. \textbf{Without Iteration: } This  
+1. \textbf{MisDetect Without Iteration: } This variant just does the detection once, which means choicing a very big dirty pool containing instances with large early loss and a clean pool to test the influence of each instance, then directly filter all the mislabel instances with large influence in the dirty pool without iteration.
 
-2. \textbf{Without Parameter influence:} 
+2. \textbf{MisDetect Without Parameter Influence:} Apparently, this variant does not test the parameter influence after dirty pool is established at each iteration. It just consider the loss of each instance at initial training stage.
 
-3. \textbf{Without Early Loss}
+3. \textbf{MisDetect Without Early Loss:} This variant using parameter influence as the main detect method, in other words, it does not consider the loss of every instance in the training set except needing a clean pool which is created through early loss, the instance with large influence will be detected as mislabel data in this variant.
 
-\textbf{\textit{\underline{Hyper-prameter Setting.}}} 
+\textbf{\textit{\underline{Hyper-prameter Setting.}}} We train convolution neural network for image-classification task and simple 3-layers perceptron for tabular dataset.Both networks apply learning rate with 0.001 and optimizer with Adam. For CIFAR-10, CIFAR-100, CovType and Mobile Price Prediction datasets, we inject mislabel data by flipping labels of 20\% for each type of the dataset randomly. For MisDetect, we chose XXX as the clean pool len.For Ensemble-based method, we use a toal of 10 different models,such as AdaBoost, RandomForest, Support Vector Machine, etc. For Cleanlab, we use LogisticRegression to compute the thresholds for noisy estimation.\textbf{(need?)}
 
-\textbf{\textit{\underline{Evaluation Metrics.}}}We mainly focus on the effectiveness of our algorithm and other baselines, so we take precision, recall and f1-score as the most important metrics.
+\textbf{\textit{\underline{Evaluation Metrics.}}}We mainly focus on the effectiveness of our algorithm and other baselines, so we take precision, recall and F1-score as the most important metrics.
 
-\subsection{Comparison with Baselines Settings}
+\subsection{Comparison with Baselines}
+
+Given that MisDetect is a iterative detection method,
 
 \subsection{Mislabel Ratio Evaluation}
 
