@@ -2,20 +2,34 @@
 \section{Preliminary} 
 \label{sec:pre}
 
-\subsection{Problem Definition}
+In this Section, we will first introduce some basic concepts, followed by  the problem definition.
 
-\stitle{Detection with parameter(gradient?) approximation}
+\stitle{Mislabel detection.} Given a dataset $\train=\{o_1, o_2, ..., o_N\}$, each instance  $o_i = (x_i, y_i), i\in [1,N]$ is associated with the feature $x_i$ and a corresponding label $y_i$. Labels are error-prone due to many reasons like crowdsourcing workers' error, so each instance has an unknown ground truth label $y_i^*$. The problem of mislabel detection is to identify all mislabeled instances, \ie $\train_m = \{o_i|o_i\in \train, y_i \neq y_i^*\}$. Besides, we use $\train_c$ to denote the set of clean instances, \ie $\train = \train_c \cup \train_m$.
+Note that  we could  support any data type, and in practice, we test images and tabular data.
 
-The setting of our problems.
+\stitle{Supervised machine learning.} As we all know, labels play a significant role in supervised ML training.
+Clean training instances will no doubt lead to a smooth training process and better ML model, and thus it is reasonable to leverage ML model to detect mislabels~\cite{}. Given a clean dataset, \eg  $\train_c$ , the objective of training  is to compute the best parameter so as to minimize the training loss. To be specific, 
 
-Input: A training set which contains mislabeled data.
-% \begin{itemize}
-%	\item A trainging set which contains mislabeled data.
-% \end{itemize}
+\begin{equation}~\label{eqa:loss}
+	w^* = \arg\min\limits_{w\in \mathcal{W}} l(w), l(w)= \frac{1}{|\train_c|}\sum_{i=1}^{|\train_c|} l_i(w, x_i)
+\end{equation}
 
-Output: A subset of the initial training set whose parameters are closest to those of the model trained by removing all the real dirty data in the training set.
+\noindent where $\mathcal{W}$ represents the parameter space, and $l_i(w, x_i)$ denotes the loss of the $i-$th training instance. Typically, the gradient decent algorithm is often applied to optimize Equation~\ref{eqa:loss}. To achieve high efficiency, we can use stochastic gradient decent to accelerate the training process. Note that we can support multi-classification tasks, \ie the label $y$ has to be categorical values.
 
-\stitle{Complexity analysis:} NP
+
+
+\stitle{Our problem definition.} As discussed above, if we decide to use machine learning model to help detect mislabeled instances, we can have the following formulation.
+
+\begin{equation}~\label{eqa:optimize}
+\train_m = \arg\min\limits_{\train'\subseteq \train} \rVert w(\train')-w^* \lVert
+\end{equation}
+
+\noindent where $w(\train')$ represents the model parameter trained over the dataset $\train \setminus \train'$. Overall, Equation~\ref{eqa:optimize}
+is easy to understand that we aim to detect a set of mislabeled instances $\train'$ such that training over $\train \setminus \train'$ is equivalent to training over $\train_c$. Obviously, when we detect exactly all the mislabeled instances, the above optimization goal will be achieved. However, Equation~\ref{eqa:optimize} is rather challenging to be solved because (1) we cannot obtain $w^*$ because we do not know $\train_c$ in advance, and (2) assuming that we can know  $w^*$, it is prohibitively expensive to enumerate the subsets of $\train$ to find $\train_m$.
+
+Next, we introduce the over framework of \sys to address the mislabel detection problem using ML model.
+
+
 
 %\subsection{Early Loss} The accuracy on ``clean'' samples is higher than on the ``bad'' samples, especially in the initial epochs of training. In other words, the training loss on correctly labeled instances is higher than that of the incorrectly labeled instance.
 
