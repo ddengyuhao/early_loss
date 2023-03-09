@@ -16,7 +16,7 @@
 \item Mobile Price Prediction: This is a small tabular dataset with only 2000 records. The task is to predict price range of the mobile on the basis of the information about the mobile, specification like Battery power, 3G enabled , wifi ,Bluetooth, Ram etc.\textbf{(need remove?)}
 %\item \nan{If we can have a good summary of experiments, we can either add here or use a ``stitle'' section to highlight the empirical findings.}
 \ee
-\textbf{\textit{\underline{Method.}}}We compare our approach against several competing mislabel detection methods. First, we consider 8 baselines:
+\textbf{\textit{\underline{Method.}}}We compare our approach against several competing mislabel detection methods. First, we consider 10 baselines:
 
 1. \textbf{K-Nearest Neighbor(KNN):} The method counts the number of inconsistencies between the label of a training instance and the labels of its surrounding neighbors. If there is strong evidence of distinction among the labels, the training instance is marked as mislabeled. This kind of method is called local learning method.
 
@@ -30,15 +30,13 @@
 
 6. \textbf{Ensemble-based method with majority vote:}  The main idea of this method is tha same as the Ensemble-based method with consensus filter.The only inconsistency between them is that majority vote strategy considers an example to be mislabeled if it disagrees with the majority vote of the classifiers.
 
-7. \textbf{Cleanlab:} Cleanlab proposes an emerging framework called confident learning, which core for detection include two main steps: Count and Clean. The first step is to estimate a joint distribution directly between incorrectly labeled data and uncorrupted(real) data based on the assumption of classification noise process(CNP). After that, some instances in the training set would be tabbed as mislabel based on the joint distribution matrix computed above in the second step.
+7. \textbf{Cleanlab:} Cleanlab proposes an emerging framework called confident learning, which core for detection include two main steps: Count and Clean. The first step is to estimate a joint distribution directly between incorrectly labeled data and uncorrupted(real) data based on the assumption of classification noise process(CNP)[]. After that, some instances in the training set would be tabbed as mislabel based on the joint distribution matrix computed above in the second step.
 
 8. \textbf{Noisy Cross-Validation(NCV):} This method first randomly devide a noisy training set into two halves, then train a neural network for these two half separately. After that, the network which is trained on one half will be applied to another half of the dataset. A sample would be identified as mislabel when its current label is different from its predicted label.
 
 9. \textbf{Iterative Noisy Cross-Validation(INCV):} Obviously, this is a iterative method about noisy cross-validation. Apart from selecting mislabel samples, the INCV removes samples that have large categorical cross entropy loss at each iteration.
 
-10. \textbf{Self-Ensemble Label Filtering(SELF):} The method 
-
-11. \textbf{Partition Filter:} This method first partition a noisy dataset into multi-subsets, and then construct a good classifier from each subset. For a given training sample, all classifier will be applied on it, the mislabel sample often have higher probability to have larger misclassified times.
+10. \textbf{Partition Filter:} This method first partition a noisy dataset into multi-subsets, and then construct a good classifier from each subset. For a given training sample, all classifier will be applied on it, the mislabel sample often have higher probability to have larger misclassified times.
 
 We also consider three variants of our algorithm. The goal is to compare the effectiveness of the cross-validation using both early loss and parameter influence. For all variations, we use the same training paradigms. We consider the following variants:
 
