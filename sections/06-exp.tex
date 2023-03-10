@@ -22,7 +22,7 @@
 
 2. \textbf{Nearest Centroid Neighborhood (NCN):} This method is also belong to local learning method, which assumes that the labels of mislabeled instances tend to disagree with the labels of other instances in their surrounding neighborhood. The difference between KNN and this method is the approach about how to find the nearest neighbor.
 
-3. \textbf{Training Set Debugging Using Trusted Items(DUTI):} DUTI utilizes a small set of additional "trusted items"to help detect incorrectly labeled item, which core is to finds the smallest changes for the labels in training set such that the classifier trained on the changed dtaset classify all the trusted items correctly.
+3. \textbf{Training Set Debugging Using Trusted Items(DUTI):} DUTI utilizes a small set of additional "trusted items"to help detect incorrectly labeled item, which core is to finds the smallest changes for the labels in training set such that the classifier trained on the changed dataset classify all the trusted items correctly. DUTI proposes an iterative algorithm to achieve its goal.
 
 4. \textbf{Forgetting Events:} In the process of model training, a sample has been correctly classified by the model. With the update of model parameters, the sample has been incorrectly classified. This process is called a forgetting event of the sample. This method identifies a mislabel sample based on one assumption that noisy sample often experience more forgetting events than normal samples during model training. 
 
@@ -32,11 +32,11 @@
 
 7. \textbf{Cleanlab:} Cleanlab proposes an emerging framework called confident learning, which core for detection include two main steps: Count and Clean. The first step is to estimate a joint distribution directly between incorrectly labeled data and uncorrupted(real) data based on the assumption of classification noise process(CNP)[]. After that, some instances in the training set would be tabbed as mislabel based on the joint distribution matrix computed above in the second step.
 
-8. \textbf{Noisy Cross-Validation(NCV):} This method first randomly devide a noisy training set into two halves, then train a neural network for these two half separately. After that, the network which is trained on one half will be applied to another half of the dataset. A sample would be identified as mislabel when its current label is different from its predicted label.
+8. \textbf{Noisy Cross-Validation(NCV):} This method first randomly devides a noisy training set into two halves, then train a neural network for these two half separately. After that, the network which is trained on one half will be applied to another half of the dataset. A sample would be identified as mislabel when its current label is different from its predicted label.
 
 9. \textbf{Iterative Noisy Cross-Validation(INCV):} Obviously, this is a iterative method about noisy cross-validation. Apart from selecting mislabel samples, the INCV removes samples that have large categorical cross entropy loss at each iteration.
 
-10. \textbf{Partition Filter:} This method first partition a noisy dataset into multi-subsets, and then construct a good classifier from each subset. For a given training sample, all classifier will be applied on it, the mislabel sample often have higher probability to have larger misclassified times.
+10. \textbf{Partition Filter:} This method partitions a noisy dataset into multi-subsets, and then construct a good classifier from each subset iterately. For a given training sample, all classifier will be applied on it, the mislabel sample often have higher probability to have larger misclassified times.
 
 We also consider three variants of our algorithm. The goal is to compare the effectiveness of the cross-validation using both early loss and parameter influence. For all variations, we use the same training paradigms. We consider the following variants:
 

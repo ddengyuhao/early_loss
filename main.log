@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.17)  9 MAR 2023 22:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.17)  10 MAR 2023 11:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1787,13 +1787,10 @@ Class acmart Warning: ACM keywords are mandatory for papers over two pages.
 Class acmart Warning: CCS concepts are mandatory for papers over two pages.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3000) has occurred while \output is active []
 
-
-Overfull \vbox (1.71999pt too high) has occurred while \output is active []
-
-
-[4.4] (./main.aux)
+ [4.4]
+(./main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
@@ -1805,11 +1802,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9FDC401DB832202B4BFE19AEC2DA1FC3;2352.
  ) 
 Here is how much of TeX's memory you used:
- 38685 strings out of 478268
- 716660 string characters out of 5846347
- 1102898 words of memory out of 5000000
- 55488 multiletter control sequences out of 15000+600000
- 632720 words of font info for 348 fonts, out of 8000000 for 9000
+ 38674 strings out of 478268
+ 716471 string characters out of 5846347
+ 1102950 words of memory out of 5000000
+ 55483 multiletter control sequences out of 15000+600000
+ 632174 words of font info for 344 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  89i,11n,131p,3241b,526s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_ki75ao.enc
@@ -1834,7 +1831,7 @@ nts/type1/public/libertine/LinLibertineTI.pfb></usr/local/texlive/2022/texmf-di
 st/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2022/texmf-dist/fonts
 /type1/public/newtx/txmiaX.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
 public/newtx/txsys.pfb>
-Output written on main.pdf (4 pages, 540854 bytes).
+Output written on main.pdf (4 pages, 540971 bytes).
 PDF statistics:
  274 PDF objects out of 1000 (max. 8388607)
  186 compressed objects within 2 object streams
