@@ -14,17 +14,17 @@ Clean training instances will no doubt lead to a smooth training process and bet
 	w^* = \arg\min\limits_{w\in \mathcal{W}} l(w), l(w)= \frac{1}{|\train_c|}\sum_{i=1}^{|\train_c|} l_i(w, x_i)
 \end{equation}
 
-\noindent where $\mathcal{W}$ represents the parameter space, and $l_i(w, x_i)$ denotes the loss of the $i-$th training instance. Typically, the gradient decent algorithm is often applied to optimize Equation~\ref{eqa:loss}. To achieve high efficiency, we can use stochastic gradient decent to accelerate the training process. Note that we can support multi-classification tasks, \ie the label $y$ has to be categorical values.
+\noindent where $\mathcal{W}$ represents the parameter space, and $l_i(w, x_i)$ denotes the loss of the $i-$th training instance. Typically, the gradient decent algorithm is often applied to optimize Equation~\ref{eqa:loss}. To achieve high efficiency, we can use stochastic gradient decent to accelerate the training process. Note that we can support multi-classification tasks, \ie the label $y$ has to be categorical values. For ease of representation, we can abbreviate $l_i(w, x_i)$ as $l_i(w)$.
 
 
 
 \stitle{Our problem definition.} As discussed above, if we decide to use machine learning model to help detect mislabeled instances, we can have the following formulation.
 
 \begin{equation}~\label{eqa:optimize}
-\train_m = \arg\min\limits_{\train'\subseteq \train} \rVert w(\train')-w^* \lVert
+\train_m = \arg\min\limits_{\train'\subseteq \train} \rVert w_{\train'}-w^* \lVert
 \end{equation}
 
-\noindent where $w(\train')$ represents the model parameter trained over the dataset $\train \setminus \train'$. Overall, Equation~\ref{eqa:optimize}
+\noindent where $w_{\train'}$ represents the model parameter trained over the dataset $\train \setminus \train'$. Overall, Equation~\ref{eqa:optimize}
 is easy to understand that we aim to detect a set of mislabeled instances $\train'$ such that training over $\train \setminus \train'$ is equivalent to training over $\train_c$. Obviously, when we detect exactly all the mislabeled instances, the above optimization goal will be achieved. However, Equation~\ref{eqa:optimize} is rather challenging to be solved because (1) we cannot obtain $w^*$ because we do not know $\train_c$ in advance, and (2) assuming that we can know  $w^*$, it is prohibitively expensive to enumerate the subsets of $\train$ to find $\train_m$.
 
 Next, we introduce the over framework of \sys to address the mislabel detection problem using ML model.

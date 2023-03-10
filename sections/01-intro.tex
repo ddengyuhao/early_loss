@@ -39,7 +39,7 @@ Our contributions are summarized as follows:
 
 \noindent (1) We formally model the mislabel detection problem and  design an iterative mislabel detection framework \sys with high accuracy based on machine learning training.
 
-\noindent (2) We introduce the early loss to help determine whether an instance is mislabeled, which is very effective.
+\noindent (2) We incorporate the early loss to help determine whether an instance is mislabeled, which is very effective.
 
 \noindent (3) We propose an influence computation method customized to our problem to further improve the performance of  mislabel detection, based on the influence function. 
 
@@ -52,13 +52,12 @@ Our contributions are summarized as follows:
 	\label{fig:framework}
 \end{figure*}
 
-The paper is organized as follows. We first introduce the preliminaries including the problem definition in Section~\ref{sec:pre}. Then the overall framework is introduced in  Section~\ref{sec:framework}. Next, we introduce the details of how to use early loss to detect mislabels (Section~\ref{sec:loss}), followed by using the instance influence to further improve the performance Section~\ref{sec:incluence}. Furthermore, we design other optimization techniques like mislabel rate estimation, and outlier processing in Section~\ref{sec:outlier}. Related work is discusses in Section~\ref{sec:related} and we conduct experiments in Section~\ref{sec:exp}. The significant notations used in this paper are listed in Table~\ref{tab:notation}.
+The paper is organized as follows. We first introduce the preliminaries including the problem definition in Section~\ref{sec:pre}. Then the overall framework is introduced in  Section~\ref{sec:framework}. Next, we introduce the details of how to use early loss to detect mislabels (Section~\ref{sec:loss}), followed by using the instance influence to further improve the performance Section~\ref{sec:influence}. Furthermore, we design other optimization techniques like mislabel rate estimation, and outlier processing in Section~\ref{sec:optimization}. Related work is discusses in Section~\ref{sec:related} and we conduct experiments in Section~\ref{sec:exp}. The significant notations used in this paper are listed in Table~\ref{tbl:notation}.
 
 
 \begin{table}
 	\centering
 	\caption{Notation Table}
-	\vspace{-1em}
 	{
 		\begin{tabular}{|c|c|}
 			\hline
@@ -74,8 +73,8 @@ The paper is organized as follows. We first introduce the preliminaries includin
 			$\model$ & Downstream model for mislabel detection.   \\\hline	
 		\end{tabular}
 	}
-	\label{tbl:dataset}
-	\vspace{-2.2em}
+	\label{tbl:notation}
+
 \end{table}
 
 
