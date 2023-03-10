@@ -58,7 +58,11 @@ Given that MisDetect is a iterative detection method,
 
 \subsection{Mislabel Distribution Evaluation}
 
-We test the algorithms on two types of label noise: symmetric and class-conditional label noise. In symmetric label noise, each label is randomly flipped to any of the remaining classes with equal probability, whereas for class-conditional noise, label flipping is done in a set of similar classes. For example, 
+We test the algorithms on two types of label noise: random and systematic label noise. In random label noise, each label is randomly flipped to any of the remaining classes with equal probability, whereas for systematic noise, label flipping is done in a set of similar classes. For example, for a class “a”, all its mislabel samples are given the identical noisy label “b”.
+
+Intuitively, random noisy labels are easier to fit than systematic ones since the model will learn a more directed and hence stronged signal. In this section , we compares the precision, recall and F1-score in all datasets between the two types of label noise.
+
+\textbf{(Result.)} As shown in figure X.
 
 \subsection{Model Evaluation}
 
