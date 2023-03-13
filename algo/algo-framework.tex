@@ -3,12 +3,30 @@
  \begin{figure}[!t]
 % \vspace{-1em}
 	\begin{algorithm}[H]
+		\normalem
 	\caption{ \sys Framework \label{alg:framework}}
 		{\small
-		\KwIn{ The original dataset $\train$, model $\model$}
-		\KwOut{The set  $D^*$ of mislabeled instances.}
+		\KwIn{ The original dataset $\train$, model $\model$,  $k$ (number of detected instances per iteration).}
+		\KwOut{The set  $R$ of mislabeled instances.}
+	
+	$R = \emptyset$; $cnt=0$;
+	
+	$\mathcal{O}$=\texttt{Outlier\_Cand($\train$)}; \\\nllabel{algo:outlier}
+	
+	$\train = \train / \mathcal{O}$;
+	
+	$K$=\texttt{Mislabel\_Number\_Estimation($\train$)}; \\\nllabel{algo:rate}
+		
+	\While{$cnt < K$}
+	{
+		/* Training for one epoch */ \\
+      $cnt += k$;
+      
+    }
+		
+		
 			
-		\Return $D^*$;\\\nllabel{alg1:return}
+		\Return $R$;\\\nllabel{alg1:return}
 	
 	}
 	\end{algorithm}

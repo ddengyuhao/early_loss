@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  11 MAR 2023 12:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.30)  13 MAR 2023 12:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1907,7 +1907,7 @@ surrounding objects on input line 10.
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 19.
 
-<figures/loss.pdf, id=76, 462.52798pt x 346.89601pt>
+<figures/loss.pdf, id=80, 462.52798pt x 346.89601pt>
 File: figures/loss.pdf Graphic file (type pdf)
  <use figures/loss.pdf>
 Package pdftex.def Info: figures/loss.pdf used on input line 25.
@@ -1937,7 +1937,7 @@ Package microtype Info: Character `textemdash ' is missing
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 37.
 
-<figures/framework.pdf, id=103, 1014.79124pt x 308.15125pt>
+<figures/framework.pdf, id=107, 1014.79124pt x 308.15125pt>
 File: figures/framework.pdf Graphic file (type pdf)
 
 <use figures/framework.pdf>
@@ -1958,7 +1958,8 @@ Package microtype Info: Character `textemdash ' is missing
 Class acmart Warning: A possible image without description on input line 53.
 
 
-LaTeX Warning: Reference `sec:loss' on page 2 undefined on input line 55.
+LaTeX Warning: Reference `sec:optimization' on page 2 undefined on input line 5
+5.
 
 ) (./sections/02-pre.tex
 
@@ -1996,44 +1997,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Warning: Reference `' on page 3 undefined on input line 24.
-
-
 Class acmart Warning: \vspace should only be used to provide space above/below 
 surrounding objects on input line 27.
 
-(./algo/algo-framework.tex
-Package hyperref Info: bookmark level for unknown algocf defaults to 0 on input
- line 6.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 11.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 6.0pt on input line 11.
 
-Underfull \hbox (badness 10000) detected at line 14
-[][]
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Class acmart Warning: A possible image without description on input line 16.
-
-)) (./sections/04-loss.tex) (./sections/05-influence.tex)
-(./sections/06-exp.tex
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
-(Font)              scaled to size 9.0pt on input line 7.
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 7.0pt on input line 8.
+(Font)              scaled to size 7.0pt on input line 31.
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `T1/zi4/m/n/7'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/n/7'.
 (microtype)             Ignoring protrusion settings for this character.
- [3.3 <./figures/framework.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4.4])
-(./sections/07-related.tex) (./sections/08-conclusion.tex) (./main.bbl
+ [3.3 <./figures/framework.pdf>]) (./sections/04-loss.tex) (./sections/05-influ
+ence.tex)
+(./sections/06-fp.tex) (./sections/06-exp.tex
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
+(Font)              scaled to size 9.0pt on input line 7.
+ [4.4]) (./sections/07-related.tex) (./sections/08-conclusion.tex) (./main.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 40.
 
@@ -2047,15 +2030,19 @@ Class acmart Warning: ACM keywords are mandatory for papers over two pages.
 
 Class acmart Warning: CCS concepts are mandatory for papers over two pages.
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package atenddvi Info: Last page = 5.
-[5.5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 44.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 44.
- (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
+ [5.5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 45.
+
+(./main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B3F9DEA13313B29B532462ED15773B28;2352.
+(rerunfilecheck)             Checksum: 678D34B32B310151BA74F7833E010D4B;2621.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2066,13 +2053,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 42912 strings out of 492995
- 782359 string characters out of 6132704
- 946454 words of memory out of 5000000
- 45147 multiletter control sequences out of 15000+600000
- 176938 words of font info for 317 fonts, out of 8000000 for 9000
+ 42898 strings out of 492995
+ 782156 string characters out of 6132704
+ 947773 words of memory out of 5000000
+ 45141 multiletter control sequences out of 15000+600000
+ 165546 words of font info for 310 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,12n,94p,10381b,575s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,11n,94p,10381b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_ki75ao.enc
 }{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc}{/u
 sr/local/texlive/2017/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{/us
@@ -2098,10 +2085,10 @@ txr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txexs.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/
 local/texlive/2017/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on main.pdf (5 pages, 699804 bytes).
+Output written on main.pdf (5 pages, 701914 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
- 39 named destinations out of 1000 (max. 500000)
- 44711 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 309 PDF objects out of 1000 (max. 8388607)
+ 212 compressed objects within 3 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 43695 words of extra memory for PDF output out of 51595 (max. 10000000)
 
